@@ -1,11 +1,8 @@
-#!/usr/bin/env python3
-
-import aws_cdk as cdk
-
-from test_dep.test_dep_stack import TestDepStack
+from aws_cdk import core
+from test_dep.test_dep_stack import LambdaPhotoCheck
 
 
-app = cdk.App()
-TestDepStack(app, "test-dep")
 
+app = core.App()
+LambdaPhotoCheck(app, "Photo-Check-Lmd")
 app.synth()
